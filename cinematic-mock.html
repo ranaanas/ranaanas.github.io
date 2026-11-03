@@ -388,67 +388,6 @@
        Hero Portrait: Dual-Mode Switcher & 3D Architectural Redesign
        ========================================================================== */
 
-    /* Top Navbar Presentation Switcher */
-    .nav-switch-wrapper {
-      display: flex;
-      align-items: center;
-      margin-left: 0.5rem;
-    }
-
-    .presentation-toggle {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(14, 23, 48, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 999px;
-      padding: 3px;
-      gap: 2px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .presentation-toggle .toggle-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      border: none;
-      background: transparent;
-      color: rgba(255, 255, 255, 0.62);
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 600;
-      padding: 0.38rem 0.82rem;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .presentation-toggle .toggle-btn:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .presentation-toggle .toggle-btn.active {
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 700;
-      box-shadow: 0 0 14px var(--accent-glow);
-    }
-
-    .presentation-toggle .toggle-indicator {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #10B981;
-      box-shadow: 0 0 8px #10B981;
-      animation: pulseGreen 2s infinite ease-in-out;
-    }
-
-    @keyframes pulseGreen {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.65; }
-    }
 
     /* ==========================================================================
        ReactBits.dev Inspired Components & Motion System
@@ -526,77 +465,6 @@
       width: 100%;
     }
 
-    /* Floating Switcher Bar on Top of Stage */
-    .hero-stage-switcher-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.15rem;
-      padding: 0.35rem 0.75rem;
-      background: rgba(10, 16, 32, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 999px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      z-index: 10;
-      transition: all 0.3s ease;
-    }
-
-    .stage-switcher-tag {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-weight: 700;
-      padding-left: 0.25rem;
-    }
-
-    .stage-switch-pills {
-      display: inline-flex;
-      background: rgba(3, 6, 18, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      padding: 3px;
-      gap: 3px;
-    }
-
-    .stage-pill {
-      border: none;
-      background: transparent;
-      color: rgba(255, 255, 255, 0.6);
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 600;
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.22s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .stage-pill:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .stage-pill.active {
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 700;
-      box-shadow: 0 0 14px var(--accent-glow);
-    }
-
-    .stage-pill .pill-sparkle {
-      font-size: 11px;
-      color: #60A5FA;
-    }
 
     /* Portrait Stage Base */
     .hero-portrait-stage {
@@ -798,60 +666,6 @@
       white-space: nowrap;
     }
 
-    /* ====== ORIGINAL STAGE CONTAINER ====== */
-    .original-stage-elements {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      transition: opacity 0.35s ease;
-    }
-
-    .hero-glow-aura {
-      position: absolute;
-      width: 440px;
-      height: 440px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-      filter: blur(40px);
-      z-index: 1;
-      bottom: 60px;
-      animation: auraPulse 6s infinite ease-in-out;
-      transition: background 0.4s ease;
-    }
-
-    @keyframes auraPulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.08); opacity: 1; }
-    }
-
-    .hero-portrait-img-original {
-      position: relative;
-      z-index: 3;
-      max-height: 540px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 35px var(--accent-glow));
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
-    }
-
-    .hero-portrait-badge {
-      position: absolute;
-      bottom: 25px;
-      left: 10%;
-      z-index: 5;
-      background: rgba(18, 18, 22, 0.88);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(16px);
-      padding: 0.85rem 1.25rem;
-      border-radius: 14px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
 
     .badge-status-dot {
       width: 8px;
@@ -1388,7 +1202,6 @@
       .hero-pedestal-card { width: 370px; height: 360px; }
       .hero-portrait-img-redesign { max-height: 430px; }
       .portrait-picture-wrapper { height: 450px; }
-      .hero-portrait-img-original { max-height: 400px; }
       .chip-top-right { top: 20px; right: 2%; }
       .chip-bottom-left { bottom: 15px; left: 2%; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1397,7 +1210,6 @@
       .timeline-row { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .theme-switcher-title { display: none; }
-      .nav-switch-wrapper { margin-left: 0.25rem; }
     }
 
     @media (max-width: 640px) {
@@ -1409,21 +1221,12 @@
       .hero-portrait-img-redesign { max-height: 370px; }
       .chip-top-right { display: none; }
       .chip-bottom-left { bottom: 10px; left: 50%; transform: translateX(-50%) translateZ(45px); width: max-content; }
-      .hero-stage-switcher-bar { transform: scale(0.92); margin-bottom: 0.75rem; }
     }
 
     /* ==========================================================================
        Full-Site ReactBits.dev Component Architecture & Global Theme Switching
        ========================================================================== */
 
-    /* Global Mode Visibility */
-    body.mode-original .section-redesign-view,
-    body.mode-original .reactbits-dock-wrapper {
-      display: none !important;
-    }
-    body.mode-redesign .section-original-view {
-      display: none !important;
-    }
 
     /* 1. ReactBits RotatingText */
     .rotating-text-box {
@@ -2106,7 +1909,7 @@
     }
   </style>
 </head>
-<body class="mode-redesign">
+<body>
 
   <!-- Film Grain Overlay -->
   <div class="grain-overlay"></div>
@@ -2130,17 +1933,6 @@
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#experience" class="nav-link">Journey</a></li>
         <li><a href="#contact" class="nav-link">Connect</a></li>
-        <li class="nav-switch-wrapper">
-          <div class="presentation-toggle" title="Switch photo presentation: Redesign vs Original">
-            <button type="button" class="toggle-btn active" id="navSwitchRedesign" data-mode="redesign" aria-label="Switch to 3D Redesign">
-              <span class="toggle-indicator"></span>
-              <span class="toggle-label">Redesign</span>
-            </button>
-            <button type="button" class="toggle-btn" id="navSwitchOriginal" data-mode="original" aria-label="Switch to Original">
-              <span class="toggle-label">Original</span>
-            </button>
-          </div>
-        </li>
         <li>
           <a href="#contact" class="btn-accent-pill">
             <span>Inquire</span>
@@ -2200,21 +1992,6 @@
         <!-- Right Side: Sharp Portrait Presentation with Live Switcher -->
         <div class="hero-portrait-column">
           
-          <!-- Quick Switcher Bar on Top of Portrait -->
-          <div class="hero-stage-switcher-bar">
-            <span class="stage-switcher-tag">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              View:
-            </span>
-            <div class="stage-switch-pills">
-              <button type="button" class="stage-pill active" id="heroSwitchRedesign" data-mode="redesign" aria-label="Switch to 3D Redesign">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: #60A5FA; vertical-align: -1px; margin-right: 4px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg><span class="shiny-text">3D Redesign</span>
-              </button>
-              <button type="button" class="stage-pill" id="heroSwitchOriginal" data-mode="original" aria-label="Switch to Original">
-                Original
-              </button>
-            </div>
-          </div>
 
           <!-- Dual-Mode Portrait Stage -->
           <div class="hero-portrait-stage" id="heroPortraitStage">
@@ -2269,19 +2046,6 @@
               </div>
             </div>
 
-            <!-- ====== ORIGINAL PRESENTATION (Toggled on switch) ====== -->
-            <div class="original-stage-elements" id="originalStage" style="display: none;">
-              <div class="hero-glow-aura"></div>
-              <img src="./assets/profile-cutout.png" alt="Rana Anas - Technical Operations Leader" class="hero-portrait-img-original" id="heroPortraitOriginal">
-              
-              <div class="hero-portrait-badge">
-                <span class="badge-status-dot"></span>
-                <div>
-                  <div style="font-size: 11px; font-weight: 700; color: #fff;">Available For Global Remote</div>
-                  <div style="font-size: 9px; color: var(--accent); font-family: var(--font-mono); letter-spacing: 0.1em; transition: color 0.3s ease;">LEADERSHIP & DEV</div>
-                </div>
-              </div>
-            </div>
 
           </div>
         </div>
@@ -2478,31 +2242,6 @@
           </div>
         </div>
 
-        <!-- ORIGINAL VIEW: Classic 4-box layout -->
-        <div class="section-original-view">
-          <div class="metrics-grid">
-            <div class="metric-card">
-              <div class="metric-num">98<span class="accent">%+</span></div>
-              <div class="metric-label">Lifetime CSAT Rating</div>
-              <div class="metric-sub">Maintained across Compass.com & n.exchange high-tier accounts.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-num">50<span class="accent">+</span></div>
-              <div class="metric-label">Team Members Led</div>
-              <div class="metric-sub">Directing 24/7 cross-functional support and technical operations.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-num">15<span class="accent">%</span></div>
-              <div class="metric-label">Retention Increase</div>
-              <div class="metric-sub">Delivered through strategic account governance at Telebridge.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-num"><span class="accent">#</span>1</div>
-              <div class="metric-label">Floor Handler Volume</div>
-              <div class="metric-sub">Top volume resolution record at ibex supporting Compass PropTech.</div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -2687,70 +2426,6 @@
           </div>
         </div>
 
-        <!-- ORIGINAL VIEW: Classic list HUD -->
-        <div class="section-original-view">
-          <div class="about-grid">
-            <div>
-              <div class="section-eyebrow">Cloud & Operations Architecture</div>
-              <h2 class="section-heading">
-                <span style="display:block;">Architecting</span>
-                <span class="ghost">the resilient.</span>
-              </h2>
-
-              <p class="about-bio-p">
-                "Transforming complex operational and technical challenges into seamless customer and software experiences across SaaS, Blockchain, and Logistics ecosystems."
-              </p>
-
-              <p class="about-bio-p">
-                With <strong>7+ years of multidisciplinary experience</strong>, I lead high-velocity support operations, architect desktop & web software utilities, and bridge the gap between complex engineering architectures and seamless customer success.
-              </p>
-
-              <p class="about-bio-p">
-                My background encompasses enterprise <strong>Cloud Infrastructure (AWS, Azure, Oracle Cloud)</strong>, server orchestration, DNS routing, and proprietary trading technology, supplemented by modern AI agent development workflows.
-              </p>
-
-              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem;">
-                <span class="project-tag">AWS Cloud</span>
-                <span class="project-tag">Microsoft Azure</span>
-                <span class="project-tag">Oracle OCI</span>
-                <span class="project-tag">DNS & SSL Routing</span>
-                <span class="project-tag">Incident Triage</span>
-                <span class="project-tag">Zendesk / Freshdesk</span>
-              </div>
-            </div>
-
-            <!-- Cloud Server Topology Telemetry HUD -->
-            <div class="cloud-topology-hud">
-              <div class="hud-header">
-                <span class="hud-title">Infrastructure Cluster Telemetry</span>
-                <span style="font-family: var(--font-mono); font-size: 10px; color: var(--accent); transition: color 0.3s ease;">STATUS: 99.98% HEALTH</span>
-              </div>
-
-              <div class="hud-nodes-list">
-                <div class="hud-node-item">
-                  <span><span class="hud-dot"></span>AWS Production Cluster</span>
-                  <span style="color: rgba(255,255,255,0.45);">us-east-1 • Low Latency</span>
-                </div>
-                <div class="hud-node-item">
-                  <span><span class="hud-dot"></span>Microsoft Azure Infrastructure</span>
-                  <span style="color: rgba(255,255,255,0.45);">Central US • Enterprise Sync</span>
-                </div>
-                <div class="hud-node-item">
-                  <span><span class="hud-dot"></span>Oracle Cloud Infrastructure</span>
-                  <span style="color: rgba(255,255,255,0.45);">DB Cluster • High Concurrency</span>
-                </div>
-                <div class="hud-node-item">
-                  <span><span class="hud-dot"></span>Global Anycast DNS Routing</span>
-                  <span style="color: rgba(255,255,255,0.45);">Edge Distribution • Zero Lag</span>
-                </div>
-                <div class="hud-node-item">
-                  <span><span class="hud-dot"></span>SaaS Escalation Pipeline</span>
-                  <span style="color: rgba(255,255,255,0.45);">Tier 1/2 Automation • 98% CSAT</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -2953,112 +2628,6 @@
           </div>
         </div>
 
-        <!-- ORIGINAL VIEW: Classic 3-Card Stack -->
-        <div class="section-original-view">
-          <div class="section-eyebrow"><span class="shiny-text">Engineering &amp; Utilities</span></div>
-          <h2 class="section-heading">
-            <span>Featured</span>
-            <span class="ghost">Projects.</span>
-          </h2>
-
-          <div class="projects-list">
-            
-            <!-- Project 1: ApexPen -->
-            <article class="project-cinematic-card spotlight-card">
-              <div class="project-img-container">
-                <img src="./assets/projects/ApexPen.jpeg" alt="ApexPen Desktop Screen Annotation Engine">
-              </div>
-              <div class="project-content">
-                <div>
-                  <div class="project-meta-top">
-                    <span class="project-cat">Desktop Software</span>
-                    <span class="project-date">August 2026</span>
-                  </div>
-                  <h3 class="project-title">ApexPen — Windows Screen Annotation Engine</h3>
-                  <p class="project-desc">
-                    High-performance screen annotation and live demonstration software engineered for technical trainers, live educators, software presenters, and remote teams. Featuring click-through mode and numbered instructional step badges.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">PyQt6</span>
-                    <span class="project-tag">Win32 API</span>
-                    <span class="project-tag">Vector Graphics</span>
-                    <span class="project-tag">&lt;35MB RAM</span>
-                  </div>
-                </div>
-                <div>
-                  <a href="https://github.com/ranaanas/ApexPen" target="_blank" class="btn-accent-pill">
-                    View Repository
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Project 2: MT5 Trade Manager -->
-            <article class="project-cinematic-card spotlight-card">
-              <div class="project-img-container">
-                <img src="./assets/projects/mt5-manager.jpeg" alt="MT5 Multi-Account Trade Manager">
-              </div>
-              <div class="project-content">
-                <div>
-                  <div class="project-meta-top">
-                    <span class="project-cat">FinTech & Trading</span>
-                    <span class="project-date">2026</span>
-                  </div>
-                  <h3 class="project-title">MT5 Multi-Account Trade Manager</h3>
-                  <p class="project-desc">
-                    High-concurrency trade synchronization desktop application designed for prop firm funded traders and broker desks. Built with a master-worker multiprocessing architecture eliminating sequential execution latency.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">MetaTrader 5 API</span>
-                    <span class="project-tag">Multiprocessing</span>
-                    <span class="project-tag">Keyring Security</span>
-                    <span class="project-tag">Risk Modeling</span>
-                  </div>
-                </div>
-                <div>
-                  <a href="https://github.com/ranaanas/MT5-Trade-Manager" target="_blank" class="btn-accent-pill">
-                    View Repository
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Project 3: Background Music Remover -->
-            <article class="project-cinematic-card spotlight-card">
-              <div class="project-img-container">
-                <img src="./assets/projects/audio-remover.jpeg" alt="Background Music Remover">
-              </div>
-              <div class="project-content">
-                <div>
-                  <div class="project-meta-top">
-                    <span class="project-cat">Audio Processing</span>
-                    <span class="project-date">Jul – Aug 2026</span>
-                  </div>
-                  <h3 class="project-title">Real-Time Background Music Remover</h3>
-                  <p class="project-desc">
-                    Real-time audio processing desktop utility built to isolate primary speaker vocals and suppress distracting background music from livestreams, podcasts, webinars, and tutorials with virtual audio driver routing.
-                  </p>
-                  <div class="project-tags">
-                    <span class="project-tag">Audio DSP</span>
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">WASAPI Routing</span>
-                    <span class="project-tag">OBS / Zoom Support</span>
-                  </div>
-                </div>
-                <div>
-                  <a href="https://github.com/ranaanas/background-music-remover" target="_blank" class="btn-accent-pill">
-                    View Repository
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-          </div>
-        </div>
       </div>
     </section>
 
@@ -3358,121 +2927,39 @@ document.querySelectorAll('a, button, .project-cinematic-card, .timeline-row, .m
 });
 
 // ==========================================================================
-// 4. Hero Portrait Presentation Switcher & Parallax Engine
+// 4. Hero Portrait 3D Multiplane Perspective Parallax
 // ==========================================================================
-let currentPortraitMode = localStorage.getItem('rana_portrait_mode') || 'redesign';
-
-const redesignStageEl = document.getElementById('redesignStage');
-const originalStageEl = document.getElementById('originalStage');
-const brandAvatarMini = document.getElementById('brandAvatarMini');
-
-const navSwitchRedesign = document.getElementById('navSwitchRedesign');
-const navSwitchOriginal = document.getElementById('navSwitchOriginal');
-const heroSwitchRedesign = document.getElementById('heroSwitchRedesign');
-const heroSwitchOriginal = document.getElementById('heroSwitchOriginal');
-
 const pedestalCard = document.getElementById('pedestalCard');
 const portraitPictureWrap = document.getElementById('portraitPictureWrapper');
 const chipTopRight = document.getElementById('chipTopRight');
 const chipBottomLeft = document.getElementById('chipBottomLeft');
 const pedestalSheen = document.getElementById('pedestalSheen');
-const heroPortraitOriginal = document.getElementById('heroPortraitOriginal');
 
-function applyPortraitMode(mode, save = true) {
-  currentPortraitMode = mode;
-  if (save) {
-    try {
-      localStorage.setItem('rana_portrait_mode', mode);
-    } catch(err) {}
-  }
-
-  const isRedesign = mode === 'redesign';
-
-  // Toggle body classes for global redesign vs original view
-  document.body.classList.toggle('mode-redesign', isRedesign);
-  document.body.classList.toggle('mode-original', !isRedesign);
-
-  // Toggle stage elements with smooth transition
-  if (redesignStageEl) redesignStageEl.style.display = isRedesign ? 'flex' : 'none';
-  if (originalStageEl) originalStageEl.style.display = isRedesign ? 'none' : 'flex';
-
-  // Toggle Navbar buttons
-  if (navSwitchRedesign) {
-    navSwitchRedesign.classList.toggle('active', isRedesign);
-    navSwitchRedesign.setAttribute('aria-pressed', isRedesign ? 'true' : 'false');
-  }
-  if (navSwitchOriginal) {
-    navSwitchOriginal.classList.toggle('active', !isRedesign);
-    navSwitchOriginal.setAttribute('aria-pressed', !isRedesign ? 'true' : 'false');
-  }
-
-  // Toggle Hero buttons
-  if (heroSwitchRedesign) {
-    heroSwitchRedesign.classList.toggle('active', isRedesign);
-    heroSwitchRedesign.setAttribute('aria-pressed', isRedesign ? 'true' : 'false');
-  }
-  if (heroSwitchOriginal) {
-    heroSwitchOriginal.classList.toggle('active', !isRedesign);
-    heroSwitchOriginal.setAttribute('aria-pressed', !isRedesign ? 'true' : 'false');
-  }
-
-  // Toggle brand avatar mini image
-  if (brandAvatarMini) {
-    brandAvatarMini.src = './assets/avatar-face.webp';
-  }
-
-  // Sync FluidTabs indicator if active
-  if (isRedesign && typeof window.updateFluidTab === 'function') {
-    setTimeout(() => {
-      const curTab = document.querySelector('.fluid-tab-pill.active');
-      if (curTab) window.updateFluidTab(curTab);
-    }, 60);
-  }
-}
-
-// Bind button clicks
-[navSwitchRedesign, heroSwitchRedesign].forEach(btn => {
-  if (btn) btn.addEventListener('click', () => applyPortraitMode('redesign'));
-});
-[navSwitchOriginal, heroSwitchOriginal].forEach(btn => {
-  if (btn) btn.addEventListener('click', () => applyPortraitMode('original'));
-});
-
-// Initialize on page load
-applyPortraitMode(currentPortraitMode, false);
-
-// Mouse Parallax (Dual-Mode: 3D Multiplane Perspective vs Classic 2D)
 window.addEventListener('mousemove', (e) => {
   const normX = (e.clientX / window.innerWidth) - 0.5;
   const normY = (e.clientY / window.innerHeight) - 0.5;
 
-  if (currentPortraitMode === 'redesign') {
-    const rotY = normX * 14;
-    const rotX = -normY * 10;
+  const rotY = normX * 14;
+  const rotX = -normY * 10;
 
-    if (pedestalCard) {
-      pedestalCard.style.transform = `rotateY(${rotY * 0.75}deg) rotateX(${rotX * 0.75}deg) translateZ(0px)`;
-    }
-    if (portraitPictureWrap) {
-      portraitPictureWrap.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) translateZ(28px) translateX(${normX * 8}px)`;
-    }
-    if (chipTopRight) {
-      chipTopRight.style.transform = `rotateY(${rotY * 1.1}deg) rotateX(${rotX * 1.1}deg) translateZ(48px) translateX(${normX * 12}px) translateY(${normY * 8}px)`;
-    }
-    if (chipBottomLeft) {
-      chipBottomLeft.style.transform = `rotateY(${rotY * 1.1}deg) rotateX(${rotX * 1.1}deg) translateZ(48px) translateX(${normX * 10}px) translateY(${normY * 6}px)`;
-    }
-    if (pedestalSheen && pedestalCard) {
-      const rect = pedestalCard.getBoundingClientRect();
-      const sheenX = ((e.clientX - rect.left) / rect.width) * 100;
-      const sheenY = ((e.clientY - rect.top) / rect.height) * 100;
-      pedestalSheen.style.setProperty('--sheen-x', `${sheenX}%`);
-      pedestalSheen.style.setProperty('--sheen-y', `${sheenY}%`);
-    }
-  } else {
-    if (heroPortraitOriginal) {
-      heroPortraitOriginal.style.transform = `translateX(${normX * 18}px) translateY(${normY * 12}px) rotate(${normX * 1.5}deg)`;
-    }
+  if (pedestalCard) {
+    pedestalCard.style.transform = `rotateY(${rotY * 0.75}deg) rotateX(${rotX * 0.75}deg) translateZ(0px)`;
+  }
+  if (portraitPictureWrap) {
+    portraitPictureWrap.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) translateZ(28px) translateX(${normX * 8}px)`;
+  }
+  if (chipTopRight) {
+    chipTopRight.style.transform = `rotateY(${rotY * 1.1}deg) rotateX(${rotX * 1.1}deg) translateZ(48px) translateX(${normX * 12}px) translateY(${normY * 8}px)`;
+  }
+  if (chipBottomLeft) {
+    chipBottomLeft.style.transform = `rotateY(${rotY * 1.1}deg) rotateX(${rotX * 1.1}deg) translateZ(48px) translateX(${normX * 10}px) translateY(${normY * 6}px)`;
+  }
+  if (pedestalSheen && pedestalCard) {
+    const rect = pedestalCard.getBoundingClientRect();
+    const sheenX = ((e.clientX - rect.left) / rect.width) * 100;
+    const sheenY = ((e.clientY - rect.top) / rect.height) * 100;
+    pedestalSheen.style.setProperty('--sheen-x', `${sheenX}%`);
+    pedestalSheen.style.setProperty('--sheen-y', `${sheenY}%`);
   }
 });
 
